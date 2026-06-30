@@ -1,0 +1,68 @@
+HTML
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Radio Virtual</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Arial', sans-serif; background-color: #121212; color: #fff; text-align: center; }
+        
+        header { padding: 40px 20px; background: linear-gradient(135deg, #1e1e24, #ff4a57); }
+        h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        
+        .reproductor-box { background-color: #1e1e1e; max-width: 400px; margin: 40px auto; padding: 30px; border-radius: 15px; box-shadow: 0 8px 24px rgba(0,0,0,0.5); }
+        .btn-play { background-color: #ff4a57; border: none; color: white; padding: 15px 40px; font-size: 1.2rem; font-weight: bold; border-radius: 30px; cursor: pointer; transition: 0.3s; }
+        .btn-play:hover { background-color: #e03e4a; transform: scale(1.05); }
+        
+        .info-seccion { max-width: 800px; margin: 40px auto; padding: 20px; line-height: 1.6; }
+        footer { margin-top: 60px; padding: 20px; background-color: #0a0a0a; font-size: 0.9rem; color: #666; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>📻 Radio Familiar</h1>
+        <p>Transmitiendo buena música junto a ti</p>
+    </header>
+
+    <main>
+        <section class="reproductor-box">
+            <h2>Escúchanos en Vivo</h2>
+            <p style="color: #aaa; margin-bottom: 20px;">Señal en Directo</p>
+            
+            <!-- REPRODUCTOR DE AUDIO -->
+            <!-- Reemplaza 'TU_URL_DE_STREAMING' por el enlace de tu proveedor de radio (Icecast/Shoutcast) -->
+            <audio id="radio-stream" src="TU_URL_DE_STREAMING"></audio>
+            
+            <button class="btn-play" onclick="toggleRadio()">REPRODUCIR</button>
+        </section>
+
+        <section class="info-seccion">
+            <h2>Sobre Nosotros</h2>
+            <p>Un proyecto de radio virtual creado por padre e hijo, compartiendo la mejor selección musical y entretenimiento las 24 horas del día.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Radio Virtual - Hecho en equipo</p>
+    </footer>
+
+    <script>
+        function toggleRadio() {
+            const radio = document.getElementById('radio-stream');
+            const btn = document.querySelector('.btn-play');
+            if (radio.paused) {
+                radio.play();
+                btn.innerText = "PAUSAR";
+                btn.style.backgroundColor = "#333";
+            } else {
+                radio.pause();
+                btn.innerText = "REPRODUCIR";
+                btn.style.backgroundColor = "#ff4a57";
+            }
+        }
+    </script>
+</body>
+</html>
