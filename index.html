@@ -1,4 +1,3 @@
-HTML
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,40 +6,57 @@ HTML
     <title>Radio Beraca</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Arial', sans-serif; background-color: #121212; color: #fff; text-align: center; }
+        body { font-family: 'Arial', sans-serif; background-color: #0c0c0e; color: #fff; text-align: center; }
         
-        header { padding: 40px 20px; background: linear-gradient(135deg, #1e1e24, #ff4a57); }
-        h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        header { padding: 40px 20px; background: linear-gradient(135deg, #111115, #1a1a24); border-bottom: 2px solid #d4af37; }
+        h1 { font-size: 2.5rem; margin-bottom: 5px; color: #d4af37; text-shadow: 0 2px 4px rgba(0,0,0,0.8); }
         
-        .reproductor-box { background-color: #1e1e1e; max-width: 400px; margin: 40px auto; padding: 30px; border-radius: 15px; box-shadow: 0 8px 24px rgba(0,0,0,0.5); }
-        .btn-play { background-color: #ff4a57; border: none; color: white; padding: 15px 40px; font-size: 1.2rem; font-weight: bold; border-radius: 30px; cursor: pointer; transition: 0.3s; }
-        .btn-play:hover { background-color: #e03e4a; transform: scale(1.05); }
+        .main-container { max-width: 500px; margin: 40px auto; padding: 20px; }
         
-        .info-seccion { max-width: 800px; margin: 40px auto; padding: 20px; line-height: 1.6; }
-        footer { margin-top: 60px; padding: 20px; background-color: #0a0a0a; font-size: 0.9rem; color: #666; }
+        /* Contenedor de la Imagen Central */
+        .logo-radio { width: 100%; max-width: 350px; height: auto; border-radius: 15px; box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15); margin-bottom: 30px; }
+        
+        /* Contenedor del Reproductor de Música */
+        .reproductor-box { background: linear-gradient(145deg, #16161c, #1f1f2a); padding: 30px; border-radius: 20px; border: 1px solid #2a2a35; box-shadow: 0 12px 32px rgba(0,0,0,0.6); }
+        .reproductor-box h2 { font-size: 1.4rem; margin-bottom: 5px; color: #fff; }
+        .estado-senal { color: #d4af37; font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 25px; font-weight: bold; }
+        
+        /* Botón de Play Interactiva */
+        .btn-play { background: linear-gradient(135deg, #d4af37, #aa8416); border: none; color: #000; padding: 18px 50px; font-size: 1.2rem; font-weight: bold; border-radius: 35px; cursor: pointer; box-shadow: 0 4px 15px rgba(212,175,55,0.4); transition: all 0.3s ease; }
+        .btn-play:hover { transform: scale(1.05); box-shadow: 0 6px 20px rgba(212,175,55,0.6); }
+        .btn-play:active { transform: scale(0.98); }
+        
+        .info-seccion { max-width: 600px; margin: 45px auto; padding: 20px; line-height: 1.8; color: #b3b3b3; font-size: 1.1rem; }
+        .info-seccion h3 { color: #fff; margin-bottom: 10px; font-size: 1.5rem; }
+        
+        footer { margin-top: 80px; padding: 25px; background-color: #060608; font-size: 0.9rem; color: #555; border-top: 1px solid #111; }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>📻 Radio Beraca</h1>
-        <p>Transmitiendo buena música junto a ti</p>
+        <h1>Radio Beraca</h1>
+        <p style="color: #888;">Llevando la palabra a tu hogar</p>
     </header>
 
-    <main>
+    <main class="main-container">
+        <!-- IMAGEN CENTRAL (image_02a281.png) -->
+        <img src="logo.png" alt="Radio Beraca - Logo" class="logo-radio">
+
+        <!-- REPRODUCTOR DE MÚSICA -->
         <section class="reproductor-box">
             <h2>Escúchanos en Vivo</h2>
-            <p style="color: #aaa; margin-bottom: 20px;">Señal en Directo</p>
+            <div class="estado-senal">● En Directo</div>
             
-            <!-- REPRODUCTOR DE AUDIO -->
+            <!-- Aquí colocas la URL que te dará tu servidor de streaming -->
             <audio id="radio-stream" src="TU_URL_DE_STREAMING"></audio>
             
             <button class="btn-play" onclick="toggleRadio()">REPRODUCIR</button>
         </section>
 
         <section class="info-seccion">
-            <h2>Sobre Nosotros</h2>
-            <p>Radio cristiana nacida en el corazón del Pastor Freud</p>
+            <h3>Sobre Nosotros</h3>
+            <p>Radio cristiana nacida en el corazón del Pastor Freud.</p>
         </section>
     </main>
 
@@ -55,11 +71,15 @@ HTML
             if (radio.paused) {
                 radio.play();
                 btn.innerText = "PAUSAR";
-                btn.style.backgroundColor = "#333";
+                btn.style.background = "#222";
+                btn.style.color = "#fff";
+                btn.style.boxShadow = "none";
             } else {
                 radio.pause();
                 btn.innerText = "REPRODUCIR";
-                btn.style.backgroundColor = "#ff4a57";
+                btn.style.background = "linear-gradient(135deg, #d4af37, #aa8416)";
+                btn.style.color = "#000";
+                btn.style.boxShadow = "0 4px 15px rgba(212,175,55,0.4)";
             }
         }
     </script>
