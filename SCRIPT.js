@@ -10,23 +10,21 @@ const equalizer = document.querySelector(".equalizer");
 let reproduciendo = false;
 
 //==================================
-// BOTÓN PLAY
+// BOTÓN PLAY (Optimizado para Transmisión en Vivo)
 //==================================
-
 playButton.addEventListener("click", () => {
-
-    if(reproduciendo){
-
+    if (reproduciendo) {
         radio.pause();
-
-    }else{
-
-        radio.play();
-
+    } else {
+        // Recarga el flujo para enganchar la transmisión en tiempo real
+        radio.load(); 
+        
+        // Ejecuta la reproducción y atrapa errores si el navegador bloquea el autoplay
+        radio.play().catch(error => {
+            console.log("Esperando interacción del usuario: ", error);
+        });
     }
-
 });
-
 //==================================
 // CUANDO COMIENZA
 //==================================
