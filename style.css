@@ -394,4 +394,312 @@ transition:.4s;
 
 transform:scale(1.03);
 
+}/*==========================
+ SECCIONES
+==========================*/
+
+.section{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:90px 8%;
+
+}
+
+.section h2{
+
+    text-align:center;
+
+    font-size:2.2rem;
+
+    color:#d4af37;
+
+    margin-bottom:45px;
+
+}
+
+.section p{
+
+    color:#dddddd;
+
+    line-height:1.9;
+
+    font-size:1.05rem;
+
+}
+
+/*==========================
+ TARJETAS
+==========================*/
+
+.coming{
+
+    max-width:650px;
+
+    margin:auto;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(212,175,55,.20);
+
+    text-align:center;
+
+    box-shadow:0 10px 40px rgba(0,0,0,.40);
+
+}
+
+.coming i{
+
+    font-size:3rem;
+
+    color:#d4af37;
+
+    margin-bottom:20px;
+
+}
+
+.coming h3{
+
+    font-size:2rem;
+
+    margin-bottom:20px;
+
+}
+
+blockquote{
+
+    max-width:850px;
+
+    margin:auto;
+
+    font-size:1.35rem;
+
+    text-align:center;
+
+    line-height:2;
+
+    color:#ffffff;
+
+    font-style:italic;
+
+}
+
+strong{
+
+    display:block;
+
+    text-align:center;
+
+    margin-top:25px;
+
+    color:#d4af37;
+
+    font-size:1.2rem;
+
+}
+
+/*==========================
+ REDES
+==========================*/
+
+.social{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:25px;
+
+    margin-top:40px;
+
+}
+
+.social a{
+
+    padding:18px 35px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-weight:600;
+
+    transition:.35s;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.10);
+
+}
+
+.social a:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 15px 35px rgba(212,175,55,.30);
+
+}
+
+.social .fa-instagram{
+
+    color:#ff4ea3;
+
+}
+
+.social .fa-tiktok{
+
+    color:#ffffff;
+
+}
+
+/*==========================
+ FOOTER
+==========================*/
+
+footer{
+
+    margin-top:80px;
+
+    padding:50px 20px;
+
+    text-align:center;
+
+    background:#050505;
+
+    border-top:1px solid rgba(212,175,55,.15);
+
+}
+
+footer img{
+
+    width:90px;
+
+    border-radius:50%;
+
+    margin-bottom:20px;
+
+    box-shadow:0 0 25px rgba(212,175,55,.30);
+
+}
+
+footer p{
+
+    color:#aaaaaa;
+
+    line-height:1.8;
+
+}
+
+/*==========================
+ ANIMACIONES
+==========================*/
+
+.section{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:1s;
+
+}
+
+.section.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/*==========================
+ RESPONSIVE
+==========================*/
+
+@media(max-width:900px){
+
+header{
+
+flex-direction:column;
+
+padding:20px;
+
+}
+
+nav{
+
+margin-top:20px;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:18px;
+
+}
+
+.hero{
+
+flex-direction:column-reverse;
+
+text-align:center;
+
+padding-top:180px;
+
+}
+
+.hero-left h1{
+
+font-size:2.7rem;
+
+}
+
+.hero-right img{
+
+max-width:300px;
+
+}
+
+.logo{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.social{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.social a{
+
+width:280px;
+
+justify-content:center;
+
+}
+
 }
