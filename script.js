@@ -122,3 +122,30 @@ window.addEventListener("scroll",()=>{
     }
 
 });
+// ==============================
+// HEADER INTELIGENTE
+// ==============================
+
+let lastScroll = 0;
+const header = document.querySelector("header");
+
+window.addEventListener("scroll", () => {
+
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll <= 0) {
+        header.style.transform = "translateY(0)";
+        return;
+    }
+
+    if (currentScroll > lastScroll) {
+        // Bajando
+        header.style.transform = "translateY(-100%)";
+    } else {
+        // Subiendo
+        header.style.transform = "translateY(0)";
+    }
+
+    lastScroll = currentScroll;
+
+});
