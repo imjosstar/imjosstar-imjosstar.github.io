@@ -2,32 +2,46 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Radio Beraca | Voz de Esperanza</title>
 
-    <meta name="description" content="Radio Beraca - Llevando la Palabra de Dios a tu hogar las 24 horas.">
+    <meta name="description"
+        content="Radio Beraca - Llevando la Palabra de Dios a cada hogar las 24 horas.">
 
-    <link rel="icon" href="LogoRadioBeraca.jpg">
+    <meta name="theme-color" content="#d4af37">
+
+    <link rel="icon" href="favicon.ico">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-    <!-- Hoja de estilos -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-    <!-- Fondo animado -->
+    <!-- Fondo -->
+
     <div class="background"></div>
 
-    <!-- Barra superior -->
+    <!-- HEADER -->
 
     <header>
 
@@ -65,7 +79,15 @@
 
     <section class="hero" id="inicio">
 
-        <div class="hero-left">
+        <div class="hero-text">
+
+            <span class="live">
+
+                <span class="live-dot"></span>
+
+                EN VIVO
+
+            </span>
 
             <h1>
 
@@ -79,22 +101,15 @@
 
             <p>
 
-                Escúchanos las 24 horas con música,
-
-                mensajes y enseñanza bíblica.
+                Radio Beraca transmite las 24 horas del día compartiendo
+                música cristiana, mensajes de esperanza y la Palabra de Dios
+                para bendecir tu vida y la de tu familia.
 
             </p>
 
-            <div class="live">
-
-                <span class="dot"></span>
-
-                EN VIVO
-
-            </div>
-
             <audio id="radio-stream"
-                src="TU LINK DEL STREAM"></audio>
+                src="https://stream-03.surfernetwork.com/bwnto0jno2auv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJid250bzBqbm8yYXV2IiwiaG9zdCI6InN0cmVhbS0wMy5zdXJmZXJuZXR3b3JrLmNvbSIsInJ0dGwiOjUsImp0aSI6IkxjaVN5ZTBSVFNpYkpYV0pCN3F3S2ciLCJpYXQiOjE3ODI3ODE5MDUsImV4cCI6MTc4Mjc4MTk2NX0.kdbc5gX8iMNByxss9UgT2GmtZ3fFwY9hJ38tCMiI5xg">
+            </audio>
 
             <button id="playButton">
 
@@ -107,66 +122,72 @@
             <div class="equalizer">
 
                 <span></span>
-
                 <span></span>
-
                 <span></span>
-
                 <span></span>
-
                 <span></span>
 
             </div>
 
         </div>
 
-        <div class="hero-right">
+        <div class="hero-image">
 
-            <img src="LogoRadioBeraca.jpg" alt="Radio Beraca">
+            <img src="LogoRadioBeraca.jpg"
+                alt="Logo Radio Beraca">
+
+        </div>
+
+    </section>    <!-- SOBRE NOSOTROS -->
+
+    <section class="section" id="nosotros">
+
+        <div class="container">
+
+            <div class="card">
+
+                <i class="fa-solid fa-radio"></i>
+
+                <h2>Sobre Nosotros</h2>
+
+                <p>
+
+                    Radio Beraca nace con el propósito de compartir el
+                    evangelio de Jesucristo a través de Internet,
+                    llevando esperanza, fe y adoración a miles de
+                    hogares las 24 horas del día.
+
+                </p>
+
+            </div>
 
         </div>
 
     </section>
 
-    <!-- SOBRE NOSOTROS -->
-
-    <section class="section" id="nosotros">
-
-        <h2>Sobre Nosotros</h2>
-
-        <p>
-
-            Radio Beraca nace con el propósito de llevar esperanza,
-
-            fe y la Palabra de Dios a cada hogar mediante Internet,
-
-            compartiendo una programación cristiana que edifique la vida
-
-            de cada oyente.
-
-        </p>
-
-    </section>
-
     <!-- PROGRAMACIÓN -->
 
-    <section class="section" id="programacion">
+    <section class="section dark" id="programacion">
 
-        <h2>Programación</h2>
+        <div class="container">
 
-        <div class="coming">
+            <div class="card">
 
-            <i class="fa-solid fa-calendar-days"></i>
+                <i class="fa-solid fa-calendar-days"></i>
 
-            <h3>Próximamente</h3>
+                <h2>Programación</h2>
 
-            <p>
+                <h3>Próximamente</h3>
 
-                Estamos preparando una programación especial
+                <p>
 
-                para bendecir tu vida.
+                    Muy pronto estaremos publicando nuestra programación
+                    oficial con espacios de predicación, música,
+                    enseñanza bíblica y contenido para toda la familia.
 
-            </p>
+                </p>
+
+            </div>
 
         </div>
 
@@ -176,69 +197,127 @@
 
     <section class="section" id="versiculo">
 
-        <h2>Versículo del Día</h2>
+        <div class="container">
 
-        <blockquote>
+            <div class="card verse">
 
-            "Porque yo sé los planes que tengo para vosotros,
+                <i class="fa-solid fa-book-bible"></i>
 
-            dice Jehová, planes de bienestar y no de mal,
+                <h2>Versículo del Día</h2>
 
-            para daros el fin que esperáis."
+                <blockquote>
 
-        </blockquote>
+                    "Porque yo sé los planes que tengo para vosotros,
+                    dice Jehová, planes de bienestar y no de mal,
+                    para daros el fin que esperáis."
 
-        <strong>Jeremías 29:11</strong>
+                </blockquote>
 
-    </section>
+                <span>Jeremías 29:11</span>
 
-    <!-- REDES -->
-
-    <section class="section" id="redes">
-
-        <h2>Síguenos</h2>
-
-        <div class="social">
-
-            <a href="https://www.instagram.com/radio_beraca?igsh=MTI3MTRlb3B6eGgwOQ%3D%3D&utm_source=qr"
-                target="_blank">
-
-                <i class="fab fa-instagram"></i>
-
-                Instagram
-
-            </a>
-
-            <a href="https://www.tiktok.com/@beracaradiocr?_r=1&_t=ZS-97ekwp9A4As"
-                target="_blank">
-
-                <i class="fab fa-tiktok"></i>
-
-                TikTok
-
-            </a>
+            </div>
 
         </div>
 
     </section>
 
+    <!-- REDES -->
+
+    <section class="section dark" id="redes">
+
+        <div class="container">
+
+            <h2 class="center">
+
+                Síguenos en nuestras redes sociales
+
+            </h2>
+
+            <div class="social-grid">
+
+                <a href="https://www.instagram.com/radio_beraca?igsh=MTI3MTRlb3B6eGgwOQ%3D%3D&utm_source=qr"
+                    target="_blank"
+                    class="social-card instagram">
+
+                    <i class="fa-brands fa-instagram"></i>
+
+                    <div>
+
+                        <h3>Instagram</h3>
+
+                        <p>@radio_beraca</p>
+
+                    </div>
+
+                </a>
+
+                <a href="https://www.tiktok.com/@beracaradiocr?_r=1&_t=ZS-97ekwp9A4As"
+                    target="_blank"
+                    class="social-card tiktok">
+
+                    <i class="fa-brands fa-tiktok"></i>
+
+                    <div>
+
+                        <h3>TikTok</h3>
+
+                        <p>@beracaradiocr</p>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>    <!-- FOOTER -->
+
     <footer>
 
-        <img src="LogoRadioBeraca.jpg">
+        <div class="footer-content">
 
-        <p>
+            <img src="LogoRadioBeraca.jpg"
+                 alt="Radio Beraca">
 
-            © 2026 Radio Beraca
+            <h3>Radio Beraca</h3>
 
-            <br>
+            <p>
 
-            Llevando la Palabra de Dios a tu hogar.
+                Voz de Esperanza
 
-        </p>
+            </p>
+
+            <div class="footer-social">
+
+                <a href="https://www.instagram.com/radio_beraca?igsh=MTI3MTRlb3B6eGgwOQ%3D%3D&utm_source=qr"
+                   target="_blank">
+
+                    <i class="fa-brands fa-instagram"></i>
+
+                </a>
+
+                <a href="https://www.tiktok.com/@beracaradiocr?_r=1&_t=ZS-97ekwp9A4As"
+                   target="_blank">
+
+                    <i class="fa-brands fa-tiktok"></i>
+
+                </a>
+
+            </div>
+
+            <p class="copyright">
+
+                © 2026 Radio Beraca · Todos los derechos reservados.
+
+            </p>
+
+        </div>
 
     </footer>
-<link rel="icon" type="image/jpeg" href="LogoRadioBeraca.jpg">
-    
+
+    <!-- JAVASCRIPT -->
+
     <script src="script.js"></script>
 
 </body>
