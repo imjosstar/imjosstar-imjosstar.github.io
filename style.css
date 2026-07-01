@@ -1,0 +1,397 @@
+/* ===========================
+   RADIO BERACA
+   Hoja de estilos
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:#080808;
+    color:#ffffff;
+    overflow-x:hidden;
+
+}
+
+/*==========================
+ Fondo
+==========================*/
+
+.background{
+
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+
+    background:
+
+    radial-gradient(circle at top,#6f5300 0%,#1a1a1a 35%,#090909 80%);
+
+    z-index:-10;
+
+}
+
+/*==========================
+ Header
+==========================*/
+
+header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    padding:18px 8%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.35);
+
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid rgba(212,175,55,.2);
+
+    z-index:999;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.logo img{
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:50%;
+
+    border:3px solid #d4af37;
+
+    box-shadow:0 0 20px rgba(212,175,55,.45);
+
+}
+
+.logo h2{
+
+    color:#d4af37;
+
+    font-size:1.4rem;
+
+}
+
+.logo span{
+
+    color:#cccccc;
+
+    font-size:.85rem;
+
+}
+
+/*==========================
+ Menú
+==========================*/
+
+nav{
+
+    display:flex;
+
+    gap:30px;
+
+}
+
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:500;
+
+    transition:.35s;
+
+}
+
+nav a:hover{
+
+    color:#d4af37;
+
+}
+
+/*==========================
+ Hero
+==========================*/
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:140px 8% 80px;
+
+    gap:60px;
+
+}
+
+.hero-left{
+
+    flex:1;
+
+}
+
+.hero-left h1{
+
+    font-size:4rem;
+
+    line-height:1.1;
+
+}
+
+.hero-left span{
+
+    color:#d4af37;
+
+}
+
+.hero-left p{
+
+    margin-top:25px;
+
+    color:#cfcfcf;
+
+    font-size:1.1rem;
+
+    line-height:1.8;
+
+}
+
+/*==========================
+ En vivo
+==========================*/
+
+.live{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-top:35px;
+
+    color:#d4af37;
+
+    font-weight:700;
+
+}
+
+.dot{
+
+    width:14px;
+
+    height:14px;
+
+    background:#ff2e2e;
+
+    border-radius:50%;
+
+    animation:pulse 1.5s infinite;
+
+}
+
+@keyframes pulse{
+
+0%{
+
+box-shadow:0 0 0 0 rgba(255,0,0,.7);
+
+}
+
+70%{
+
+box-shadow:0 0 0 18px rgba(255,0,0,0);
+
+}
+
+100%{
+
+box-shadow:0 0 0 0 rgba(255,0,0,0);
+
+}
+
+}
+
+/*==========================
+ Botón
+==========================*/
+
+#playButton{
+
+    margin-top:30px;
+
+    padding:18px 45px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:linear-gradient(135deg,#d4af37,#9d7312);
+
+    color:black;
+
+    font-size:1rem;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:0 10px 30px rgba(212,175,55,.3);
+
+}
+
+#playButton:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 15px 35px rgba(212,175,55,.5);
+
+}
+
+/*==========================
+ Ecualizador
+==========================*/
+
+.equalizer{
+
+    display:flex;
+
+    align-items:flex-end;
+
+    gap:6px;
+
+    margin-top:35px;
+
+    height:45px;
+
+}
+
+.equalizer span{
+
+    width:6px;
+
+    background:#d4af37;
+
+    border-radius:10px;
+
+    animation:eq 1s infinite;
+
+}
+
+.equalizer span:nth-child(2){
+
+animation-delay:.2s;
+
+}
+
+.equalizer span:nth-child(3){
+
+animation-delay:.4s;
+
+}
+
+.equalizer span:nth-child(4){
+
+animation-delay:.1s;
+
+}
+
+.equalizer span:nth-child(5){
+
+animation-delay:.3s;
+
+}
+
+@keyframes eq{
+
+0%,100%{
+
+height:12px;
+
+}
+
+50%{
+
+height:42px;
+
+}
+
+}
+
+/*==========================
+ Imagen principal
+==========================*/
+
+.hero-right{
+
+flex:1;
+
+display:flex;
+
+justify-content:center;
+
+}
+
+.hero-right img{
+
+width:100%;
+
+max-width:430px;
+
+border-radius:25px;
+
+box-shadow:
+
+0 0 60px rgba(212,175,55,.25);
+
+transition:.4s;
+
+}
+
+.hero-right img:hover{
+
+transform:scale(1.03);
+
+}
